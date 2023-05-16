@@ -9,26 +9,25 @@ class Cardio(models.Model):
     diastolic_pressure = models.IntegerField()
     cholesterol = models.IntegerField(choices=((1, 'Normal'), (2, 'Above normal'), (3, 'Well above normal')))
     glucose = models.IntegerField(choices=((1, 'Normal'), (2, 'Above normal'), (3, 'Well above normal')))
-    smoker = models.BooleanField()
-    alcohol_intake = models.BooleanField()
-    physical_activity = models.BooleanField()"""
+    smoker = models.IntegerField()
+    alcohol_intake = models.IntegerField()
+    physical_activity = models.IntegerField()"""
 
 
 from django.db import models
 
-# Create your models here.
 class Patient(models.Model):
-    name = models.CharField(max_length=100)
-    lastname = models.CharField(max_length=100)
-    email = models.EmailField(max_length=100)
-    age = models.FloatField()
-    gender = models.FloatField()
-    weight = models.FloatField()
-    height = models.FloatField()
-    diastolic_pressure = models.FloatField()
-    systolic_pressure = models.FloatField()
-    cholesterol = models.FloatField()
-    glucose = models.FloatField()
-    smoker = models.BooleanField()
-    alcohol_intake = models.BooleanField()
-    physical_activity = models.BooleanField()
+    name = models.CharField(max_length=100, null=False)
+    lastname = models.CharField(max_length=100, default='')
+    email = models.EmailField(max_length=100, null=False)
+    age = models.FloatField(null=False)
+    gender = models.FloatField(null=False)
+    weight = models.FloatField(null=False)
+    height = models.FloatField(null=False)
+    diastolic_pressure = models.FloatField(null=False)
+    systolic_pressure = models.FloatField(null=False)
+    cholesterol = models.FloatField(null=False, default=0)
+    glucose = models.FloatField(null=False, default=0)
+    smoker = models.IntegerField(null=False, default=0)
+    alcohol_intake = models.IntegerField(null=False, default=0)  # Set the default value as per your requirement
+    physical_activity = models.IntegerField(null=False, default=0)
