@@ -121,11 +121,21 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
+DISABLE_COLLECTSTATIC = '1'
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'statiticfiles')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"),]
+STATIC_ROOT = '/app_ml/staticfiles'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
 
+"""
+DISABLE_COLLECTSTATIC=1
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'statiticfiles')
+STATIC_ROOT = '/app_ml/static'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"),]
+"""
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
