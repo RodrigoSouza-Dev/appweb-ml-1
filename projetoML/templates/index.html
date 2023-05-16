@@ -14,35 +14,101 @@
 
 <body>
   <header>
-    <h1>Cabeçalho da página</h1>
+    
   </header>
 
-  <aside>
-    <h2>Conteúdos relacionados</h2>
-    <ul>
-      <li>Conteúdo 1</li>
-      <li>Conteúdo 2</li>
-      <li>Conteúdo 3</li>
-    </ul>
-  </aside>
 
-  <section>
     <header>
-      <h2>Cabeçalho da seção</h2>
+      <h1>Previsão de Doença Cardíaca</h1>
     </header>
-
-    <article>
-      <p>Conteúdo do artigo.</p>
-    </article>
+    
+    <div class="container">
+      <h1>Preencha o formulário para receber o resultado da sua consulta por email:</h1>
+      
+      <form method="post">
+        {% csrf_token %}
+          <label for="name">Nome:</label>
+          <input type="text" name="name" id="name">
+          
+          <label for="lastname">Sobrenome:</label>
+          <input type="text" name="lastname" id="lastname">
+         
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email">
+          
+          <label for="age">Idade:</label>
+          <input type="number" name="age" id="age">
+          
+          <label for="gender">Gênero:</label>
+          <select name="gender" id="gender">
+            <option value="1">Masculino</option>
+            <option value="2">Feminino</option>
+          
+          </select>
+          
+          <label for="height">Altura (cm):</label>
+          <input type="number" name="height" id="height">
+          
+          <label for="weight">Peso (kg):</label>
+          <input type="number" name="weight" id="weight">
+          
+          <label for="systolic_pressure">Pressão Sistólica (alta):</label>
+          <input type="number" name="systolic_pressure" id="systolic_pressure">
+          
+          <label for="diastolic_pressure">Pressão Diastólica (baixa):</label>
+          <input type="number" name="diastolic_pressure" id="diastolic_pressure">
+          
+          <label for="cholesterol">Colesterol:</label>
+          <select name="cholesterol" id="cholesterol">
+            <option value="1">Normal</option>
+            <option value="2">Acima do normal</option>
+            <option value="3">Muito acima do normal</option>
+          </select>
+          
+          <label for="glucose">Glicose:</label>
+          <select name="glucose" id="glucose">
+            <option value="1">Normal</option>
+            <option value="2">Acima do normal</option>
+            <option value="3">Muito acima do normal</option>
+          </select>
+          
+          <label for="smoker">Fumante:</label>
+          <select name="smoker" id="smoker">
+            <option value="0">Não</option>
+            <option value="1">Sim</option>
+          </select>
+        
+          <label for="alcohol_intake">Ingestão de álcool:</label>
+          <select name="alcohol_intake" id="alcohol_intake">
+            <option value="0">Não</option>
+            <option value="1">Sim</option>
+          </select>
+          
+          <label for="physical_activity">Atividade física:</label>
+          <select name="physical_activity" id="physical_activity">
+            <option value="0">Não</option>
+            <option value="1">Sim</option>
+          </select>
+          <br>
+          <div>
+            <p> Verifique se preencheu corretamente o formulário</p>
+          </div>
+          <input type="submit" value="Enviar" onclick="reiniciarAplicacao()">
+        </form>
+  
+  </div>
 
     <footer>
-      <p>Rodapé do artigo.</p>
+      <p>&copy; 2023 Previsão de Doença Cardíaca</p>
     </footer>
-  </section>
+    <script src="{% static 'js/index.js' %}"></script>
 
-  <footer>
-    <p>Rodapé da página.</p>
-  </footer>
+    <script>
+        function reiniciarAplicacao() {
+            document.getElementById("").reset(); // Limpa os campos do formulário
+            location.reload(); // Recarrega a página
+        }
+    </script>
 </body>
 
 </html>
