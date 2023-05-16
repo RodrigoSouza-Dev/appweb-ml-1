@@ -121,12 +121,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-DISABLE_COLLECTSTATIC = '1'
+#DISABLE_COLLECTSTATIC = '1'
 
-STATIC_URL = '/static/'
+STATIC_URL = '/app_ml/static/'
 STATIC_ROOT = '/app_ml/staticfiles'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, 'app_ml', 'static'),
 ]
 
 """
