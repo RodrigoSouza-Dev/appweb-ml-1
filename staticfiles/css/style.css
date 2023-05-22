@@ -91,13 +91,14 @@ h1 {
   font-size: 24px;
   margin-bottom: 20px;
   color: #34cc67;
+  
 }
 
 p {
   width: 80%;
-  margin: 20px;
-  padding: 20px;
-  color: red;
+  margin: auto;
+  padding: 10px;
+  text-align: justify;
 }
 
 label {
@@ -105,13 +106,14 @@ label {
   margin-bottom: 5px;
   font-size: 16px;
   font-weight: bold;
+  padding: 10px;
 }
 
 input[type=text],
 input[type=number],
 input[type=email] {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-bottom: 20px;
@@ -120,7 +122,7 @@ input[type=email] {
 input[type=submit] {
   background-color: #4CAF50;
   color: white;
-  padding: 12px 20px;
+  padding: 20px 100px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
