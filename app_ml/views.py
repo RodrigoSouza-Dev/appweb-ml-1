@@ -49,9 +49,9 @@ def index(request):
         y_pred = model.predict(X)
         # Transforma a previsão em uma mensagem para enviar por e-mail
         if y_pred[0] == 0:
-            resultado = 'sem sintomas de doença cardíaca'
+            resultado = 'Há indícios de doença cardíaca!'
         else:
-            resultado = 'com possivel doença cardíaca'
+            resultado = 'não foi identificado nehum indício de doença cardíaca'
         
         
         # Envia o resultado por e-mail para o usuário
