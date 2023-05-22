@@ -19,11 +19,19 @@
 
 
     <header>
-      <h1>Previsão de Doença Cardíaca</h1>
+      <h1>Triagem para análise de doença cardíaca</h1>
     </header>
     
     <div class="container">
       <h1>Preencha o formulário para receber o resultado da sua consulta por email:</h1>
+
+      <div class="container1">
+        <p> Essa aplicação se baseia em um modelo de machine learning que aplica o método Random Forest, utilizado para realizar predições de doenças cardíacas. Este modelo apresenta acuracia de 73 por cento.</p>
+        <p>Os dados inseridos no formulário serão analisados pelo modelo de machine learning, com base em seus dados
+         o modelo determinará se há indicadores de doença cardíaca e lhe enviará um e-mail com o resultado.</p>
+        <p> Essa aplicação tem o intuito de prover assistência à clinicas e consultórios em fase de triagem, academias para acompanhamento de seus usuários. 
+      </div>
+
       
       <form method="post">
         {% csrf_token %}
